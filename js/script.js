@@ -13,13 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Анимация fade-in при прокрутке
-    const fadeInElements = document.querySelectorAll('.fade-
-            }
-        });
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries: 0.1 // Начинаем анимацию, когда элемент виден хотя бы на 10%
     });
 
     fadeInElements.forEach(element => {
         observer.observe(element);
     });
-
 });
