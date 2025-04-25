@@ -1,33 +1,31 @@
-// Слайдер на главной странице
+// Текстовый слайдер на главной странице
 document.addEventListener('DOMContentLoaded', () => {
-    const sliderImages = document.querySelectorAll('.slider img');
-    let currentImage = 0;
-    let intervalId; // ID интервала
+    const sliderTexts = document.querySelectorAll('.slider p');
+    let currentTextIndex = 0;
+    let intervalId;
 
-    function showSlide(index) {
-        sliderImages.forEach(img => img.style.display = 'none'); // Скрываем все изображения
-        sliderImages[index].style.display = 'block'; // Показываем текущее
+    function showText(index) {
+        sliderTexts.forEach(text => text.style.display = 'none');
+        sliderTexts[index].style.display = 'block';
     }
 
-    function nextSlide() {
-        currentImage = (currentImage + 1) % sliderImages.length;
-        showSlide(currentImage);
+    function nextText() {
+        currentTextIndex = (currentTextIndex + 1) % sliderTexts.length;
+        showText(currentTextIndex);
     }
 
     function startSlider() {
-        intervalId = setInterval(nextSlide, 3000); // Меняем слайд каждые 3 секунды
+        intervalId = setInterval(nextText, 3000);
     }
 
     function stopSlider() {
-        clearInterval(intervalId); // Останавливаем слайдер
+        clearInterval(intervalId);
     }
 
-    // Инициализация слайдера
-    if (sliderImages.length > 0) {
-        showSlide(currentImage); // Показываем первый слайд
-        startSlider(); // Запускаем слайдер
+    if (sliderTexts.length > 0) {
+        showText(currentTextIndex);
+        startSlider();
 
-        // Дополнительно: Останавливаем слайдер при наведении
         const slider = document.querySelector('.slider');
         slider.addEventListener('mouseenter', stopSlider);
         slider.addEventListener('mouseleave', startSlider);
