@@ -20,16 +20,40 @@
     </header>
 
     <main>
-        <section>
+        <section class="fade-in">
             <h2>Записи блога</h2>
-            <p>Здесь будут записи блога.</p>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Мой блог. Все права защищены.</p>
-        <a href="#">Наверх</a>
-    </footer>
+            <div class="filter">
+                <button data-tag="all">Все</button>
+                <button data-tag="html">HTML</button>
+                <button data-tag="css">CSS</button>
+                <button data-tag="javascript">JavaScript</button>
+            </div>
 
+            <div class="blog-post" data-tags="html">
+                <h3>Основы HTML</h3>
+                <p>Краткое описание записи об основах HTML.</p>
+                <button class="read-more">Читать далее</button>
+                <div class="full-text">
+                    <p>Полный текст записи об основах HTML...</p>
+                </div>
+            </div>
+
+            <div class="blog-post" data-tags="css">
+                <h3>CSS: Стили для веб-страниц</h3>
+                <p>Краткое описание записи о CSS.</p>
+                <button class="read-more">Читать далее</button>
+                <div class="full-text">
+                    <p>Полный текст записи о CSS...</p>
+                </div>
+            </div>
+
+            <div class="blog-post" data-tags="javascript">
+                <h3>JavaScript: Интерактивность</h3>
+                <p>Краткое описание записи о JavaScript</p>
+                        
+
+            <script src="js/script.js"></script>
+    <script src="js/blog.js"></script>
 </body>
 </html>
