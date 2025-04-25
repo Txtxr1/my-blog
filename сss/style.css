@@ -125,6 +125,154 @@ body {
     display: none !important;
 }
 
+/* Главная страница (Hero section) */
+#hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Слайдер (убрали стили для картинок) */
+.slider {
+    margin-top: 20px;
+    /* Добавим стили для текстового слайдера, если нужно */
+}
+
+/* Страница "Обо мне" */
+#about-me {
+    /* Убираем стили для картинок, адаптируем для текста */
+    text-align: center;
+    padding: 30px 0;
+}
+
+.about-me-text {
+    margin-bottom: 20px;
+}
+
+/* Вкладки */
+.tabs {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.tab-button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+.tab-button.active {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+}
+
+/* Страница "Записи блога" */
+#blog-posts .filter {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#blog-posts .filter button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#blog-posts .filter button:hover {
+    background-color: #ddd;
+}
+
+#blog-posts .filter button.active {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#blog-posts .post {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#blog-posts .post h3 {
+    margin-top: 0;
+}
+
+#blog-posts .post .excerpt {
+    margin-bottom: 10px;
+}
+
+#blog-posts .post .read-more {
+    padding: 8px 12px;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#blog-posts .post .read-more:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+/* Страница "Контакты" */
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-top: 10px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button[type="submit"] {
+    padding: 12px 15px;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button[type="submit"]:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
 /* Адаптивность (Mobile First) */
 @media (max-width: 768px) {
     .container {
@@ -148,6 +296,18 @@ body {
     .header nav a {
         display: block;
         margin: 5px 0;
+        text-align: center;
+    }
+
+    #about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me-image,
+    .about-me-text {
+        width: 100%;
+        margin-right: 0;
         text-align: center;
     }
 }
