@@ -3,137 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой блог - [Название страницы]</title> <!-- Динамическое название -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="img/favicon.png">
-
-    <!-- Google Fonts (можно заменить на локальные файлы) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Дополнительные мета-теги для SEO и доступности -->
-    <meta name="description" content="[Описание страницы]">
-    <meta name="keywords" content="[Ключевые слова]">
-    <meta name="author" content="[Ваше имя]">
-    <meta name="robots" content="index, follow">  <!-- Разрешаем индексацию -->
-
-</head>
-<body>
-
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo"><h1>Мой блог</h1></a> <!-- Логотип как ссылка на главную -->
-            <nav class="nav">
-                <a href="index.html" aria-label="Главная страница">Главная</a>
-                <a href="about.html" aria-label="Обо мне">Обо мне</a>
-                <a href="blog.html" aria-label="Записи блога">Записи блога</a>
-                <a href="contact.html" aria-label="Контакты">Контакты</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="main">
-        <div class="container">
-            <!-- Контент страницы -->
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Мой блог. Все права защищены.</p>
-            <a href="#top" class="back-to-top" aria-label="Вернуться наверх">Наверх</a>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой блог - Обо мне</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="img/favicon.png">
-
-    <!-- Google Fonts (можно заменить на локальные файлы) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Дополнительные мета-теги для SEO и доступности -->
-    <meta name="description" content="Узнайте больше обо мне, авторе блога. Мое образование, интересы и навыки.">
-    <meta name="keywords" content="обо мне, автор, веб-разработчик, интересы, навыки">
-    <meta name="author" content="Никита Перегудов">
-    <meta name="robots" content="index, follow">
-    <!-- Разрешаем индексацию -->
-
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-
 <body>
 
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <h1>Мой блог</h1>
-            </a> <!-- Логотип как ссылка на главную -->
-            <nav class="nav">
-                <a href="index.html" aria-label="Главная страница">Главная</a>
-                <a href="about.html" aria-label="Обо мне">Обо мне</a>
-                <a href="blog.html" aria-label="Записи блога">Записи блога</a>
-                <a href="contact.html" aria-label="Контакты">Контакты</a>
-            </nav>
-        </div>
+    <header>
+        <h1>Мой блог</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">Обо мне</a>
+            <a href="blog.html">Записи блога</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
     </header>
 
-    <main class="main">
-        <div class="container">
-            <section id="about-me">
-                <div class="about-me-text">
-                    <h2>Привет! Я Никита Перегудов</h2>
-                    <p>Я веб-разработчик со стажем, увлекаюсь созданием современных и удобных веб-приложений. Люблю изучать новые технологии и делиться своим опытом в этом блоге.</p>
-                </div>
-
-                <div class="tabs">
-                    <button class="tab-button active" data-tab="education">Образование</button>
-                    <button class="tab-button" data-tab="interests">Интересы</button>
-                    <button class="tab-button" data-tab="skills">Навыки</button>
-
-                    <div class="tab-content active" id="education">
-                        <h3>Образование</h3>
-                        <p>Высшее техническое образование по специальности "Информационные технологии". Дополнительные курсы по веб-разработке.</p>
-                    </div>
-                    <div class="tab-content" id="interests">
-                        <h3>Интересы</h3>
-                        <p>Веб-разработка, программирование, UX/UI дизайн, новые технологии, путешествия, фотография.</p>
-                    </div>
-                    <div class="tab-content" id="skills">
-                        <h3>Навыки</h3>
-                        <ul>
-                            <li>HTML5, CSS3, JavaScript</li>
-                            <li>React, Node.js</li>
-                            <li>Git, Docker</li>
-                            <li>UX/UI Design</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </div>
+    <main>
+        <section>
+            <h2>Обо мне</h2>
+            <p>Здесь будет информация обо мне.</p>
+        </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Мой блог. Все права защищены.</p>
-            <a href="#top" class="back-to-top" aria-label="Вернуться наверх">Наверх</a>
-        </div>
+    <footer>
+        <p>&copy; 2024 Мой блог. Все права защищены.</p>
+        <a href="#">Наверх</a>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/tabs.js"></script>
 </body>
-
 </html>
