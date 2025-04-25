@@ -1,102 +1,252 @@
 /* Общие стили */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+:root {
+    --primary-color: #2980b9;  /* Синий оттенок */
+    --secondary-color: #ecf0f1; /* Светло-серый */
+    --text-color: #2c3e50;       /* Темно-серый */
+    --accent-color: #c0392b;     /* Красный для акцентов */
+    --font-family: 'Arial', sans-serif;
 }
 
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Шапка */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em 0;
+    background-color: #fff;
+    color: var(--text-color);
+    padding: 2em 0;
     text-align: center;
+    width: 100%; /* На всю ширину */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень для объема */
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px; /* Небольшое увеличение расстояния между буквами */
 }
 
 header nav {
-    margin-top: 0.5em;
-    display: flex; /* Адаптивное меню */
-    justify-content: center;
+    margin-top: 1em;
 }
 
 header nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1em;
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+header nav a:hover,
+header nav a:focus {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Основной контент */
 main {
     padding: 2em;
+    width: 80%;
+    max-width: 960px;
+    background-color: #fff;
+    margin-top: 2em;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Более выраженная тень */
+    text-align: center; /* Центрирование текста по умолчанию */
 }
 
+main h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: var(--primary-color);
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+}
+
+main ul li {
+    margin-bottom: 0.5em;
+}
+
+main a.button {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+main a.button:hover,
+main a.button:focus {
+    background-color: var(--accent-color);
+}
+
+/* Подвал */
 footer {
-    background-color: #333;
+    background-color: var(--text-color);
     color: #fff;
     text-align: center;
     padding: 1em 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    margin-top: 2em; /* Отступ от основного контента */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Тень сверху */
 }
 
 footer a {
     color: #fff;
-    text-decoration: none;
 }
 
-/* Адаптивность */
-@media (max-width: 600px) {
-    header nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav a {
-        margin: 0.5em 0;
-    }
-}
-
-/* Стили для кнопки "Наверх" */
-footer a[href="#"] {
-    display: inline-block;
-    margin-top: 0.5em;
-}
-
-/* Стили для страницы "Обо мне" */
+/* Страница "Обо мне" */
 .tab-buttons {
-    text-align: center;
+    display: flex; /* Упрощаем центровку */
+    justify-content: center;
     margin-bottom: 1em;
 }
 
 .tab-buttons button {
-    padding: 0.5em 1em;
+    padding: 0.75em 1.25em;
     margin: 0 0.5em;
-    border: none;
-    background-color: #ddd;
+    border: 1px solid var(--primary-color);
+    background-color: #fff;
+    color: var(--text-color);
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-buttons button:hover,
+.tab-buttons button:focus {
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
 .tab-buttons button.active {
-    background-color: #aaa;
+    background-color: var(--primary-color);
     color: #fff;
 }
 
 .tab-content {
     display: none;
-    padding: 1em;
-    border: 1px solid #ccc;
+    padding: 1.5em;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    text-align: left; /* Возвращаем текст к левому краю */
 }
 
 .tab-content.active {
     display: block;
 }
 
-/* Анимация появления */
+/* Страница "Записи блога" */
+.blog-post {
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    text-align: left; /* Выравниваем текст */
+}
+
+.blog-post h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.blog-post .read-more {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.blog-post .read-more:hover,
+.blog-post .read-more:focus {
+    background-color: var(--accent-color);
+}
+
+/* Страница "Контакты" */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Растягиваем элементы по ширине */
+}
+
+form label {
+    margin-top: 1em;
+    font-weight: bold;
+    text-align: left; /* Выравниваем подписи слева */
+}
+
+form input,
+form textarea {
+    padding: 0.75em;
+    margin-bottom: 1.5em;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1em; /* Увеличиваем размер шрифта */
+}
+
+form button {
+    padding: 1em;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+    background-color: var(--accent-color);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* Уменьшаем размер заголовка */
+    }
+
+    header nav a {
+        padding: 0.4em 0.8em;
+        margin: 0 0.3em;
+    }
+
+    main {
+        width: 95%; /* Занимаем больше ширины на маленьких экранах */
+    }
+
+    .tab-buttons button {
+        padding: 0.6em 1em; /* Уменьшаем padding для вкладок */
+    }
+}
+
+/* Fade-in animation */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -106,47 +256,4 @@ footer a[href="#"] {
 .fade-in.show {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Стили для страницы "Записи блога" */
-.blog-post {
-    margin-bottom: 1em;
-    padding: 1em;
-    border: 1px solid #ccc;
-}
-
-.blog-post h3 {
-    margin-top: 0;
-}
-
-/* Скрыть полный текст по умолчанию */
-.full-text {
-    display: none;
-}
-
-/* Стили для фильтра */
-.filter {
-    margin-bottom: 1em;
-}
-
-/* Стили для страницы "Контакты" */
-form label {
-    display: block;
-    margin-top: 0.5em;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 0.5em;
-    margin-bottom: 1em;
-    box-sizing: border-box;
-}
-
-form button {
-    padding: 0.5em 1em;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
 }
