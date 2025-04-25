@@ -49,3 +49,86 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой блог - Записи блога</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <!-- Google Fonts (можно заменить на локальные файлы) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Дополнительные мета-теги для SEO и доступности -->
+    <meta name="description" content="Мои записи в блоге о веб-разработке, технологиях и программировании.">
+    <meta name="keywords" content="блог, записи, веб-разработка, технологии, программирование">
+    <meta name="author" content="Никита Перегудов">
+    <meta name="robots" content="index, follow">  <!-- Разрешаем индексацию -->
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo"><h1>Мой блог</h1></a> <!-- Логотип как ссылка на главную -->
+            <nav class="nav">
+                <a href="index.html" aria-label="Главная страница">Главная</a>
+                <a href="about.html" aria-label="Обо мне">Обо мне</a>
+                <a href="blog.html" aria-label="Записи блога">Записи блога</a>
+                <a href="contact.html" aria-label="Контакты">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section id="blog-posts">
+                <h2>Записи блога</h2>
+
+                <div class="filter">
+                    <button data-tag="all" class="active">Все</button>
+                    <button data-tag="javascript">JavaScript</button>
+                    <button data-tag="html">HTML</button>
+                    <button data-tag="css">CSS</button>
+                </div>
+
+                <div class="post" data-tags="javascript html">
+                    <h3>Основы HTML для начинающих</h3>
+                    <p class="excerpt">В этом посте мы рассмотрим основы HTML и создадим вашу первую веб-страницу.</p>
+                    <p class="full-text hidden">Полный текст поста о HTML...</p>
+                    <button class="read-more">Читать далее</button>
+                </div>
+
+                <div class="post" data-tags="css">
+                    <h3>CSS: Стилизация веб-страниц</h3>
+                    <p class="excerpt">Узнайте, как использовать CSS для стилизации ваших веб-страниц и создания привлекательного дизайна.</p>
+                    <p class="full-text hidden">Полный текст поста о CSS...</p>
+                    <button class="read-more">Читать далее</button>
+                </div>
+
+                <div class="post" data-tags="javascript">
+                    <h3>JavaScript: Интерактивность на веб-страницах</h3>
+                    <p class="excerpt">В этом посте мы поговорим о том, как использовать JavaScript для добавления интерактивности на ваши веб-страницы.</p>
+                    <p class="full-text hidden">Полный текст поста о JavaScript...</p>
+                    <button class="read-more">Читать далее</button>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Мой блог. Все права защищены.</p>
+            <a href="#top" class="back-to-top" aria-label="Вернуться наверх">Наверх</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/blog-filter.js"></script>
+</body>
+</html>
