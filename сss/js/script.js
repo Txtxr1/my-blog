@@ -1,13 +1,25 @@
-// Общий код для всех страниц (например, back-to-top)
-document.addEventListener('DOMContentLoaded', () => {
-    const backToTopButton = document.querySelector('.back-to-top');
+document.addEventListener('DOMContentLoaded', function() {
+    // Скрипт для кнопки "Наверх"
+    var backToTopLink = document.querySelector('footer a[href="#"]');
 
-    if (backToTopButton) {
-        backToTopButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (backToTopLink) {
+        backToTopLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     }
 
-    // Дополнительные общие скрипты
+    // Анимация fade-in при прокрутке
+    const fadeInElements = document.querySelectorAll('.fade-
+            }
+        });
+    });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+
 });
